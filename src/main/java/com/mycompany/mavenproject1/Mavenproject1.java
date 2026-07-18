@@ -1,41 +1,27 @@
 package com.mycompany.mavenproject1;
 
-// Clase Producto
-class Producto {
-
-    // Atributos
-    String nombre;
-    double precio;
-
-    // Constructor
-    public Producto(String nombre, double precio) {
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-
-    // Método para mostrar la información del producto
-    public void mostrarProducto() {
-        System.out.println("Producto: " + nombre);
-        System.out.println("Precio: $" + precio);
-    }
-}
-
-// Clase principal
+/**
+ * Clase principal.
+ * Aquí se crean los objetos y se prueba la herencia.
+ */
 public class Mavenproject1 {
 
     public static void main(String[] args) {
 
-        // Crear objetos
-        Producto producto1 = new Producto("Laptop Gamer", 18000);
-        Producto producto2 = new Producto("Mouse Gamer", 850);
+        // Crear un producto electrónico
+        ProductoElectronico laptop = new ProductoElectronico("Laptop Gamer", 18000, 2);
 
-        // Mostrar la información del primer producto
-        producto1.mostrarProducto();
+        // Crear un accesorio
+        ProductoAccesorio mouse = new ProductoAccesorio("Mouse Gamer", 850, "Negro");
 
-        // Línea en blanco para separar los productos
+        // Mostrar información del producto electrónico
+        laptop.mostrarProducto();
+        laptop.encender();
+
         System.out.println();
 
-        // Mostrar la información del segundo producto
-        producto2.mostrarProducto();
+        // Mostrar información del accesorio
+        mouse.mostrarProducto();
+        mouse.usar();
     }
 }
